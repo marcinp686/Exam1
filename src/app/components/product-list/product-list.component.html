@@ -4,7 +4,7 @@
       <mat-card-title>Product list</mat-card-title>
       <mat-card-content>
         <mat-list role="list">
-          <mat-list-item role="listitem" *ngFor="let item of products | async">{{item.title}} ${{item.price}} <img [src]="item.image" style="max-width: 30px; max-height: 30px;"></mat-list-item>
+          <mat-list-item role="listitem" *ngFor="let item of products | async" [routerLink]="'/product/'+item.id">{{item.title}} ${{item.price}} <img [src]="item.image" style="max-width: 30px; max-height: 30px;"></mat-list-item>
         </mat-list>
       </mat-card-content>
     </mat-card>
