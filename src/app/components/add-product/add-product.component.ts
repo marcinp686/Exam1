@@ -23,8 +23,8 @@ export class AddProductComponent implements OnInit {
   }
 
   onProductAdd(product: Product) : void {     
-    this.fakestore.addProduct(product);
-    this.router.navigate(['/categories']);
+    this.fakestore.addProduct(product)
+    //this.router.navigate(['/categories']);
   } 
 
 }

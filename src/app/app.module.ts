@@ -40,8 +40,7 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
     ReactiveFormsModule,
     MatFormFieldModule,
     MatCardModule,
-    MatListModule,
-    
+    MatListModule,    
     MatInputModule
   ],
   providers: [],
