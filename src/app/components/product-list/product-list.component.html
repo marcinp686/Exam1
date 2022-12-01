@@ -1,0 +1,17 @@
+  <h1>New Year Collection</h1>
+  <ng-container *ngIf="(products | async)?.length; else loading">
+    <mat-card>
+      <mat-card-title>Product list</mat-card-title>
+      <mat-card-content>
+        <mat-list role="list">
+          <mat-list-item role="listitem" *ngFor="let item of products | async">{{item.title}} ${{item.price}} <img [src]="item.image" style="max-width: 30px; max-height: 30px;"></mat-list-item>
+        </mat-list>
+      </mat-card-content>
+    </mat-card>
+    </ng-container>
+    
+    <ng-template #loading>
+      <mat-card>
+        <mat-card-content>Loading data</mat-card-content>
+      </mat-card>
+    </ng-template>

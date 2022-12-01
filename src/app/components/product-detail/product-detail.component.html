@@ -1,0 +1,9 @@
+<mat-card>
+  <mat-card-title>Product details</mat-card-title>
+  <ng-container *ngIf="product | async as item">
+    <h1>{{item.title}}</h1>
+    <h2>{{item.price}}</h2>    
+    <p>{{item.description}}</p>
+    <img [src]="item.image" style="max-width: 200px;">
+  </ng-container>
+</mat-card>
